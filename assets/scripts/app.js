@@ -71,7 +71,7 @@ async function getPhotos() {
     }
 }
 
-//check if near the bottom of page
+//Check Scroll To The Bottom Of Page
 window.addEventListener('scroll', () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 && ready) {
         ready = false;
