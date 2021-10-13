@@ -4,7 +4,5 @@ const loader = document.getElementById('loader');
 const body = document.querySelector('body');
 
 
-//API Keys & Values
-
 
 
