@@ -81,8 +81,8 @@ h1 {
   position: absolute;
   width: 2.5rem;
   height: 2.5rem;
-  -webkit-animation: loader-container 2s linear infinite;
-          animation: loader-container 2s linear infinite;
+  -webkit-animation: loader-container 1s linear infinite;
+          animation: loader-container 1s linear infinite;
 }
 
 .image-container {
