@@ -1,0 +1,25 @@
+{
+  "name": "unsplash-infinite-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,scss}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertBognar/unsplash-infinite-scroll.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertBognar/unsplash-infinite-scroll/issues"
+  },
+  "homepage": "https://github.com/RobertBognar/unsplash-infinite-scroll#readme"
+}
