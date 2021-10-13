@@ -46,6 +46,17 @@ h1 {
             color: $redBlock;
         }
     }
+    #normal-mode {
+        margin-top: 0.5rem;
+        margin-left: 38.5rem;
+        letter-spacing: 0.3rem;
+        color: $h1Color;
+        opacity: 85%;
+        cursor: pointer;
+        &:hover {
+            color: $redBlock;
+        }
+    }
     #mode-icon {
         width: 36px;
         height: 36px;
