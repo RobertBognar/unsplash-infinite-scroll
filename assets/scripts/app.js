@@ -1,8 +1,9 @@
 const imageContainer = document.getElementById('image-container');
-const loader = document.getElementById('loader');
-const loaderContainer = document.getElementById('loader-container');
+const loader = document.querySelector('.loader');
+const loaderContainer = document.querySelector('.loader-container');
 const body = document.querySelector('body');
-const buttonMode = document.getElementById('#button-mode');
+const buttonMode = document.getElementById('button-mode');
+const block = document.getElementById('block');
 
 //Define Ready State, Image Loaders, Total Images Number Start Count & API Key
 
@@ -19,13 +20,17 @@ function updatedCount(newCount) {
     apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${newCount};`
 }
 
+function removeLoader() {
+    loaderContainer.parentNode.removeChild(loaderContainer);
+}
+
 //Check For The Loaded Images
 function imageLoaded() {
     areImagesLoaded++;
     // console.log(areImagesLoaded)
     if (areImagesLoaded === totalImgNumber) {
         ready = true;
-        // loaderContainer.innerHTML = '';
+        loader.style.display = 'none';
         updatedCount()
     }
 }
@@ -65,6 +70,7 @@ async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
+
         displayPhotos()
     } catch (error) {
         alert('Bibiti Bobiti Boo This Error Is For You :)');
