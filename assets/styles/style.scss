@@ -1,0 +1,67 @@
+@import 'variables';
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $mainFont;
+}
+
+body {
+    background-color: $background;
+}
+
+.regularDisplay {
+
+}
+
+.gridDisplay {
+    
+}
+
+.loader {
+    position: absolute;
+    margin-top: 18rem;
+    margin-left: 54rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.loader-container div {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: loader-container 1s linear infinite;
+}
+
+@keyframes loader-container {
+    0% {
+        background-color: $redBlock
+    }
+
+    12.5% {
+        background-color: $redBlock
+    }
+
+    15.5% {
+        background-color: $mainBlack
+    }
+
+    100% {
+        background-color: $mainBlack
+    }
+}
