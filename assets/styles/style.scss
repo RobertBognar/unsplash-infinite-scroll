@@ -36,25 +36,33 @@ h1 {
 
 .button-mode {
     #grid-mode {
+        width: 100px;
+        background-color: $buttonBackground;
+        border: none;
+        border-radius: 8px;
         margin-top: 2rem;
-        margin-left: 38.8rem;
+        margin-left: 38.5rem;
         letter-spacing: 0.3rem;
         color: $h1Color;
-        opacity: 85%;
         cursor: pointer;
-        &:hover {
-            color: $redBlock;
+        opacity: 95%;
+        &:active {
+            transform: scale(0.90);
         }
     }
     #normal-mode {
+        width: 100px;
+        background-color: $buttonBackground;
+        border: none;
+        border-radius: 8px;
         margin-top: 0.5rem;
-        margin-left: 38.8rem;
+        margin-left: 0.5rem;
         letter-spacing: 0.3rem;
         color: $h1Color;
-        opacity: 85%;
         cursor: pointer;
-        &:hover {
-            color: $redBlock;
+        opacity: 95%;
+        &:active {
+            transform: scale(0.90);
         }
     }
     #mode-icon {
@@ -92,6 +100,12 @@ h1 {
     width: 2.5rem;
     height: 2.5rem;
     animation: loader-container 1s linear infinite;
+}
+
+.image-container {
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 20%;
 }
 
 @keyframes loader-container {
