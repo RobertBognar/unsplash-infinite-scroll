@@ -23,6 +23,17 @@ body {
     background-color: $background;
 }
 
+h1 {
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 38.5rem;
+    color: $h1Color;
+    opacity: 85%;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.8rem;
+}
+
 .regularDisplay {
 
 }

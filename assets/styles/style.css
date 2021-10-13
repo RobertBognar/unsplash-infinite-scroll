@@ -10,6 +10,17 @@ body {
   background-color: #bebebe;
 }
 
+h1 {
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 38.5rem;
+  color: #FEFEFE;
+  opacity: 85%;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  word-spacing: 0.8rem;
+}
+
 .loader {
   position: absolute;
   margin-top: 18rem;
