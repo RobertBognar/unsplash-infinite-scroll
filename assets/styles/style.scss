@@ -24,7 +24,6 @@ body {
 }
 
 h1 {
-    position: absolute;
     margin-top: 4rem;
     margin-left: 38.5rem;
     color: $h1Color;
@@ -33,6 +32,31 @@ h1 {
     letter-spacing: 0.4rem;
     word-spacing: 0.8rem;
 }
+
+
+.button-mode {
+    #grid-mode {
+        margin-top: 2rem;
+        margin-left: 38.5rem;
+        letter-spacing: 0.3rem;
+        color: $h1Color;
+        opacity: 85%;
+        cursor: pointer;
+        &:hover {
+            color: $redBlock;
+        }
+    }
+    #mode-icon {
+        width: 36px;
+        height: 36px;
+        margin-left: 42rem;
+        margin-top: -5rem;
+        filter: invert(178%) sepia(40%) saturate(116%) hue-rotate(184deg) brightness(270%) contrast(100%);
+        cursor: pointer;
+        opacity: 95%;
+    }
+}
+
 
 .regularDisplay {
 
@@ -44,7 +68,7 @@ h1 {
 
 .loader {
     position: absolute;
-    margin-top: 18rem;
+    margin-top: 12rem;
     margin-left: 54rem;
     width: 12.5rem;
     height: 12.5rem;
