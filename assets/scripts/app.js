@@ -1,9 +1,9 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.querySelector('.loader');
-const loaderContainer = document.querySelector('.loader-container');
+// const loaderContainer = document.querySelector('.loader-container');
 const body = document.querySelector('body');
-const buttonMode = document.getElementById('button-mode');
-const block = document.getElementById('block');
+// const buttonMode = document.getElementById('button-mode');
+// const block = document.getElementById('block');
 
 //Define Ready State, Image Loaders, Total Images Number Start Count & API Key
 
@@ -20,8 +20,9 @@ function updatedCount(newCount) {
     apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${newCount};`
 }
 
+//Remove Loader Function
 function removeLoader() {
-    loaderContainer.parentNode.removeChild(loaderContainer);
+    loader.style.display = 'none';
 }
 
 //Check For The Loaded Images
@@ -30,8 +31,8 @@ function imageLoaded() {
     // console.log(areImagesLoaded)
     if (areImagesLoaded === totalImgNumber) {
         ready = true;
-        loader.style.display = 'none';
-        updatedCount()
+        removeLoader();
+        updatedCount();
     }
 }
 

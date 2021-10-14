@@ -1,13 +1,13 @@
 @import 'variables';
 
-@mixin mobile {
-    @media (min-width: #{$mobile}) {
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media (min-width: #{$tablet}) {
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
         @content;
     }
 }
@@ -23,76 +23,105 @@ body {
     background-color: $background;
 }
 
-h1 {
-    margin-top: 4rem;
-    margin-left: 38.5rem;
-    color: $h1Color;
-    opacity: 85%;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    word-spacing: 0.8rem;
+header {
+    .title {
+        width: 100%;
+        color: $h1Color;
+        font-size: 14px;
+        letter-spacing: 2px;
+        word-spacing: 1.5px;
+        margin-top: 24px;
+        margin-left: 18px;
+        opacity: 60%;
+        @include tablet {
+            font-size: 32px;
+            margin-left: 8%;
+        }
+        @include desktop() {
+            font-size: 48px;
+            margin-left: 28%;
+        }
+    }
 }
 
 
 .button-mode {
+    margin-left: 18px;
     #grid-mode {
-        width: 100px;
+        width: auto;
+        height: 42px;
+        padding: 4px;
         background-color: $buttonBackground;
         border: none;
         border-radius: 8px;
-        margin-top: 2rem;
-        margin-left: 38.5rem;
-        letter-spacing: 0.3rem;
-        color: $h1Color;
+        color: $buttonTextColor;
         cursor: pointer;
-        opacity: 95%;
         &:active {
-            transform: scale(0.90);
+            transform: scale(0.95);
+        }
+        &:hover {
+            background-color: $buttonBackgroundHover;
+        }
+        @include tablet {
+            width: 140px;
+            height: 64px;
         }
     }
     #normal-mode {
-        width: 100px;
+        width: auto;
+        height: 42px;
+        padding: 4px;
         background-color: $buttonBackground;
         border: none;
         border-radius: 8px;
         margin-top: 0.5rem;
         margin-left: 0.5rem;
-        letter-spacing: 0.3rem;
-        color: $h1Color;
+        color: $buttonTextColor;
         cursor: pointer;
-        opacity: 95%;
         &:active {
-            transform: scale(0.90);
+            transform: scale(0.95);
+        }
+        &:hover {
+            background-color: $buttonBackgroundHover;
+        }
+        @include tablet {
+            width: 140px;
+            height: 64px;
         }
     }
-    #mode-icon {
-        width: 36px;
-        height: 36px;
-        margin-left: 42rem;
-        margin-top: -5rem;
-        filter: invert(178%) sepia(40%) saturate(116%) hue-rotate(184deg) brightness(270%) contrast(100%);
-        cursor: pointer;
-        opacity: 95%;
+    @include tablet {
+        margin-left: 8%;
+    }
+    @include desktop {
+        margin-left: 28%;
     }
 }
 
 
-.regularDisplay {
-
+.normalDisplay {
+    background-color: red;
 }
 
 .gridDisplay {
-    
+    background-color: blue;
 }
 
 .loader {
-    position: absolute;
-    margin-top: 12rem;
-    margin-left: 54rem;
+    position: relative;
     width: 12.5rem;
     height: 12.5rem;
     display: inline-block;
     overflow: hidden;
+    margin-left: 16%;
+    margin-top: 34%;
+    @include tablet {
+        margin-left: 32%;
+        margin-top: 28%;
+    }
+    @include desktop {
+        margin-top: 14%;
+        margin-left: 42%;
+    }
 }
 
 .loader-container div {
@@ -104,8 +133,13 @@ h1 {
 
 .image-container {
     position: absolute;
-    margin-top: 20%;
-    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40%;
+    @include desktop {
+        margin-left: 28%;
+        margin-top: 10%;
+    }
 }
 
 @keyframes loader-container {
