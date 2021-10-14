@@ -9,5 +9,5 @@ gridDisplay.addEventListener('click', () => {
 normalDisplay.addEventListener('click', () => {
     body.classList.remove('gridDisplay');
     body.classList.add('normalDisplay');
-})
+});
 

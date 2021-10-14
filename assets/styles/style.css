@@ -66,6 +66,12 @@ header .title {
   }
 }
 
+@media (min-width: 1440px) {
+  .button-mode #grid-mode {
+    font-size: 16px;
+  }
+}
+
 .button-mode #normal-mode {
   width: auto;
   height: 42px;
@@ -95,6 +101,12 @@ header .title {
   }
 }
 
+@media (min-width: 1440px) {
+  .button-mode #normal-mode {
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 768px) {
   .button-mode {
     margin-left: 8%;
@@ -105,6 +117,17 @@ header .title {
   .button-mode {
     margin-left: 28%;
   }
+}
+
+.gridDisplay .image-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 115px;
 }
 
 .loader {
