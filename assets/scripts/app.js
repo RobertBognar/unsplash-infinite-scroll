@@ -1,9 +1,10 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.querySelector('.loader');
-// const loaderContainer = document.querySelector('.loader-container');
 const body = document.querySelector('body');
-// const buttonMode = document.getElementById('button-mode');
-// const block = document.getElementById('block');
+const popMessage = 'Press GRID/NORMAL To Switch Photo Views';
+const popMessageTwo = 'If Error Is Occured API Key Requests Are Maxed Out! Try again later! Enjoy :)';
+// window.alert(`${popMessage}`);
+// window.alert(`${popMessageTwo}`);
 
 //Define Ready State, Image Loaders, Total Images Number Start Count & API Key
 
@@ -55,7 +56,7 @@ function displayPhotos() {
         })
         const img = document.createElement('img')
         setAttributes(img, {
-            src: photo.urls.regular,
+            src: photo.urls.small,
             alt: photo.alt_description + photo.current_user_collections.title,
             title: photo.alt_description,
         })
@@ -71,7 +72,6 @@ async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
-
         displayPhotos()
     } catch (error) {
         alert('Bibiti Bobiti Boo This Error Is For You :)');

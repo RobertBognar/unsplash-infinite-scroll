@@ -46,7 +46,7 @@ header {
 
 
 .button-mode {
-    margin-left: 18px;
+    margin-left: 66px;
     #grid-mode {
         width: auto;
         height: 42px;
@@ -96,27 +96,41 @@ header {
         }
     }
     @include tablet {
-        margin-left: 8%;
+        margin-left: 21.5%;
     }
     @include desktop {
-        margin-left: 28%;
+        margin-left: 39%;
     }
 }
 
 
 .normalDisplay {
-    
+    transition: ease 0.5s;
+    .title {
+        transition: ease 0.5s;
+    }
 }
 
 .gridDisplay {
-    
+    transition: ease 0.5s;
+    background-color: rgb(198, 241, 255);
+    .title {
+        color: #FEFEFE;
+        opacity: 100%;
+        transition: ease 0.5s;
+    }
     .image-container {
         position: relative;
-        width: 50px;
-        height: 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 115px;
+        grid-gap: 10px;
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 8%;
+        }
+        @include desktop {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
@@ -150,8 +164,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40%;
+    row-gap: 10px;
+    column-gap: 10px;
     @include desktop {
-        margin-left: 28%;
+        margin-left: 18%;
         margin-top: 10%;
     }
 }
