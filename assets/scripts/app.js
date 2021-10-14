@@ -12,12 +12,12 @@ let ready = false;
 let areImagesLoaded = 0;
 let totalImgNumber = 0;
 let count = 5;
-// const apiKey = '9aYvL-k_zKwyVb7uHUpp_9cFjrekqO9gT2sGaF2jGBk';
+const apiKey = '9aYvL-k_zKwyVb7uHUpp_9cFjrekqO9gT2sGaF2jGBk';
 let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count};`
 
 //Setting New Count Start Point
 function updatedCount(newCount) {
-    newCount = 10;
+    newCount = 15;
     apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${newCount};`
 }
 
