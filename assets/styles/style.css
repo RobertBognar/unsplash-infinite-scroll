@@ -107,14 +107,6 @@ header .title {
   }
 }
 
-.normalDisplay {
-  background-color: red;
-}
-
-.gridDisplay {
-  background-color: blue;
-}
-
 .loader {
   position: relative;
   width: 12.5rem;
