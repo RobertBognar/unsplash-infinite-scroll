@@ -3,8 +3,8 @@ const loader = document.querySelector('.loader');
 const body = document.querySelector('body');
 const popMessage = 'Press GRID/NORMAL To Switch Photo Views';
 const popMessageTwo = 'If Error Is Occured API Key Requests Are Maxed Out! Try again later! Enjoy :)';
-// window.alert(`${popMessage}`);
-// window.alert(`${popMessageTwo}`);
+window.alert(`${popMessage}`);
+window.alert(`${popMessageTwo}`);
 
 //Define Ready State, Image Loaders, Total Images Number Start Count & API Key
 
