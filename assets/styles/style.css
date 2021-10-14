@@ -8,6 +8,7 @@
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 
 header .title {
@@ -17,7 +18,7 @@ header .title {
   letter-spacing: 2px;
   word-spacing: 1.5px;
   margin-top: 24px;
-  margin-left: 18px;
+  margin-left: 28px;
   opacity: 60%;
 }
 
@@ -36,7 +37,7 @@ header .title {
 }
 
 .button-mode {
-  margin-left: 66px;
+  margin-left: 76px;
 }
 
 .button-mode #grid-mode {
@@ -146,16 +147,13 @@ header .title {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
 }
 
 @media (min-width: 768px) {
   .gridDisplay .image-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    margin-left: 8%;
+    margin-left: 0;
   }
 }
 
@@ -163,6 +161,8 @@ header .title {
   .gridDisplay .image-container {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    margin-left: 10%;
+    grid-row-gap: 5px;
   }
 }
 
@@ -209,6 +209,12 @@ header .title {
   row-gap: 10px;
   -webkit-column-gap: 10px;
           column-gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    margin-left: 18%;
+  }
 }
 
 @media (min-width: 1440px) {

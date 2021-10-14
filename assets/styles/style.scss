@@ -21,6 +21,7 @@
 
 body {
     background-color: $background;
+    overflow-x: hidden;
 }
 
 header {
@@ -31,7 +32,7 @@ header {
         letter-spacing: 2px;
         word-spacing: 1.5px;
         margin-top: 24px;
-        margin-left: 18px;
+        margin-left: 28px;
         opacity: 60%;
         @include tablet {
             font-size: 32px;
@@ -46,7 +47,7 @@ header {
 
 
 .button-mode {
-    margin-left: 66px;
+    margin-left: 76px;
     #grid-mode {
         width: auto;
         height: 42px;
@@ -121,15 +122,15 @@ header {
     }
     .image-container {
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
+        display: grid;     
         @include tablet {
             grid-template-columns: repeat(2, 1fr);
-            margin-left: 8%;
+            margin-left: 0;
         }
         @include desktop {
             grid-template-columns: repeat(3, 1fr);
+            margin-left: 10%;
+            grid-row-gap: 5px;
         }
     }
 }
@@ -166,6 +167,9 @@ header {
     margin-top: 40%;
     row-gap: 10px;
     column-gap: 10px;
+    @include tablet {
+        margin-left: 18%;
+    }
     @include desktop {
         margin-left: 18%;
         margin-top: 10%;
